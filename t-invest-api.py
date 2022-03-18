@@ -16,15 +16,9 @@ async def get_minute_candles():
     async with TinkoffInvestmentsRESTClient(
         token="t.0d0gyqxYtnN4fZSlh7cdORCpIJ6TNxwk5Ksehg-FOxfRoZGdSeW0TNaLMIeMiZNVQTwUpcWjNGa4AEe7bDzcBQ", environment=Environment.SANDBOX
     ) as client:
-        client.market.instruments.get_bonds()
-        historical_data = HistoricalData(client)
-        async for candle in historical_data.iter_candles(
-            figi="BBG000B9XRY4",
-            dt_from=datetime(2022, 1, 1),
-            dt_to=datetime(2022, 2, 1),
-            interval=CandleResolution.MIN_1,
+        bonds = client.market.instruments.get_bonds()
         ):
-            print(candle)
+            print(bonds)
 
 
 asyncio.run(get_minute_candles())
