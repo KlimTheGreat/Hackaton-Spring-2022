@@ -18,10 +18,8 @@ b.reverse()
 for _ in b:
     print(_)
 History = set()
-#udl=5
 while year_now <= gorizont:
     print(year_now)
-    #i =5-udl
     i=0
     potolok = 5
     if len(b) < 5:
@@ -36,11 +34,10 @@ while year_now <= gorizont:
             print(*IdToBuy)
     History |= IdToBuy
     j = 0
-    #udl=0
     while j < len(b):
         if year_now == b[j]["year"]:
             b.pop(j)
             j -= 1
-            #udl+=1
         j += 1
     year_now += 1
+
