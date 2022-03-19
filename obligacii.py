@@ -2,6 +2,9 @@ import builtins
 
 import InvestApi
 
+def GetAmount(budget,price):
+    return budget/5//price
+
 a = InvestApi.getAllBonds()
 for item in a:
     item["true_prc"] = round(((item["nominal"] - item["price"]) + (
@@ -40,4 +43,5 @@ while year_now <= gorizont:
             j -= 1
         j += 1
     year_now += 1
-print(InvestApi.finish(2022))
+
+print(GetAmount(vvod,a[item["price"]]))
