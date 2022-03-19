@@ -1,0 +1,36 @@
+Index: SmartLabApi.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import MetaTrader5\r\n\r\ntable = MetaTrader5();\r\nprint(table.copy_rates_from())
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/SmartLabApi.py b/SmartLabApi.py
+--- a/SmartLabApi.py	(revision 4fdea7aa032ca499d7d1e4c307824daf1ec7b222)
++++ b/SmartLabApi.py	(date 1647637838551)
+@@ -1,4 +1,7 @@
+-import MetaTrader5
++import pprint
++
++import requests
++import time
+ 
+-table = MetaTrader5();
+-print(table.copy_rates_from())
+\ No newline at end of file
++
++
+Index: tvelvedata.tocken
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/tvelvedata.tocken b/tvelvedata.tocken
+new file mode 100644
+--- /dev/null	(date 1647633826354)
++++ b/tvelvedata.tocken	(date 1647633826354)
+@@ -0,0 +1,1 @@
++5767d55e67ec481698fbcbfb5b5ea0b5
+\ No newline at end of file
+diff --git a/TykerSymbol.txt b/TykerSymbol.txt
+new file mode 100644
