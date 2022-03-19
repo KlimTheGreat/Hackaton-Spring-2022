@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c17fa1e8-399c-4ab6-a5e8-2ef50f86e921" name="Changes" comment="Rest Api from Center Invest Bank">
-      <change beforePath="$PROJECT_DIR$/InvestApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/InvestApi.py" afterDir="false" />
-    </list>
+    <list default="true" id="c17fa1e8-399c-4ab6-a5e8-2ef50f86e921" name="Changes" comment="Rest Api from Center Invest Bank" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,9 +16,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/PycharmProjects/JabBot/venv/Lib/site-packages/tinkoff/invest/token.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -130,6 +125,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Edit ReadME" />
