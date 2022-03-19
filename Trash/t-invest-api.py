@@ -3,6 +3,18 @@ from datetime import datetime
 
 # https://github.com/Fatal1ty/tinkoff-api
 
+<<<<<<< HEAD
+
+
+
+async def get_minute_candles():
+    # show 1 minute candles for AAPL in 1 year period of time
+    async with TinkoffInvestmentsRESTClient(
+        token="t.0d0gyqxYtnN4fZSlh7cdORCpIJ6TNxwk5Ksehg-FOxfRoZGdSeW0TNaLMIeMiZNVQTwUpcWjNGa4AEe7bDzcBQ", environment=Environment.SANDBOX
+    ) as client:
+        bonds = client.market.instruments.get_bonds()
+            print(bonds)
+=======
 from tinkoff.investments import (
     CandleResolution,
     Environment,
@@ -31,6 +43,7 @@ async def get_bonds():
                 print(bond.isin, ":", candles[0], "руб")
     except TinkoffInvestmentsError as e:
         print(e)
+>>>>>>> origin/main
 
 
 asyncio.get_event_loop().run_until_complete(get_bonds())
