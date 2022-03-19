@@ -44,4 +44,7 @@ while year_now <= gorizont:
         j += 1
     year_now += 1
 
+<<<<<<< HEAD
 print(GetAmount(vvod,a[item["price"]]))
+=======
+>>>>>>> parent of df9b721 (Update obligacii.py)
