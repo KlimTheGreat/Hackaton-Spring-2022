@@ -40,4 +40,4 @@ while year_now <= gorizont:
             j -= 1
         j += 1
     year_now += 1
-
+print(InvestApi.finish(2022))
