@@ -7,15 +7,15 @@ headers = {
 
 def deal(type, id, amount, year):
     return requests.put(f"http://217.28.230.77:8080/v1/oper/deal?type={type}&id={id}&amount={amount}&year={year}",
-                        headers=headers).json()['message']
+                        headers=headers).json()
 
 
 def resetAccount():
-    return requests.put("http://217.28.230.77:8080/v1/account/reset", headers=headers).json()['message']
+    return requests.put("http://217.28.230.77:8080/v1/account/reset", headers=headers).json()
 
 
 def initAccount(summa):
-    return requests.put(f"http://217.28.230.77:8080/v1/account?summa={summa}", headers=headers).json()['message']
+    return requests.put(f"http://217.28.230.77:8080/v1/account?summa={summa}", headers=headers).json()
 
 
 def infoAccount():
@@ -42,10 +42,10 @@ def getAllOper():
 
 
 def finish(year):
-    return requests.put(f"http://217.28.230.77:8080/v1/oper/finish?year={year}",
-                        headers=headers).json()['message']
+    return requests.put(f"http://62.84.119.91:8080/v1/oper/finish?year={year}",
+                        headers=headers).json()
 
 
 def delete(id):
     return requests.delete(f"http://217.28.230.77:8080/v1/oper/del?id={id}",
-                           headers=headers).json()['message']
+                           headers=headers).json()
