@@ -1,19 +1,13 @@
 from datetime import datetime, timedelta
 
+import tinkoff.invest
 from tinkoff.invest import CandleInterval, Client
 from tinkoff.invest.token import TOKEN
 
 
 def main():
     with Client(TOKEN) as client:
-        for candle in client.get_all_candles(
-            figi="BBG004730N88",
-            from_=datetime.utcnow() - timedelta(days=365),
-            interval=CandleInterval.CANDLE_INTERVAL_HOUR,
-        ):
-            print(candle)
-
-    return 0
+        bonds = client.get_all_boni9pgu9pds()
 
 
 if __name__ == "__main__":
