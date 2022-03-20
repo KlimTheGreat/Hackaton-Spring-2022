@@ -11,14 +11,14 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
 
     <!-- ====== ALL CSS ====== -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="assets/css/lightbox.min.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/polzunoc.css">
+    <link rel="stylesheet" href="/static/css/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/static/css/assets/css/lightbox.min.css">
+    <link rel="stylesheet" href="/static/css/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/css/assets/css/animate.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/assets/css/responsive.css">
+    <link rel="stylesheet" href="/static/css/assets/css/polzunoc.css">
 
 
 </head>
@@ -42,7 +42,7 @@
             <div class="container">
                 <!-- Logo -->
                 <a class="navbar-brand logo" href="index.html">
-                    <img src="assets/images/logo.png" alt="logo">
+                    <img src="/static/css/assets/images/logo.png" alt="logo">
                 </a>
                 <!-- // Logo -->
 
@@ -83,12 +83,12 @@
         <div class="hero-area-slids owl-carousel">
             <div class="single-slider">
                 <!-- Single Background -->
-                <div class="slider-bg" style="background-image: url(assets/images/hero-area/img-1.jpg)"></div>
+                <div class="slider-bg" style="background-image: url(/static/css/images/hero-area/img-1.jpg)"></div>
                 <!-- // Single Background -->
             </div>
             <div class="single-slider">
                 <!-- Single Background -->
-                <div class="slider-bg" style="background-image: url(assets/images/hero-area/img-2.jpg)"></div>
+                <div class="slider-bg" style="background-image: url(/static/css/assets/images/hero-area/img-2.jpg)"></div>
                 <!-- // Single Background -->
             </div>
         </div>
@@ -154,6 +154,7 @@
             <!-- //Section Title -->
             <div class="row">
               <div class="container">
+                  <form action="/process_data/" method="POST">
                   <div class="row">
                     <!--capital-->
                     <div class="col-sm-4">
@@ -161,7 +162,7 @@
                           <label for="inputPassword6" class="col-form-label">Начальный капитал</label>
                       </div>
                       <div class="col-auto">
-                          <input type="number" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                          <input type="number"  name="money" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
                       </div>
                     </div>
                   <!--capital-->
@@ -177,9 +178,10 @@
                     <div class="row">
                       <div class="col-sm"></div>
                       <div class="col-sm"></div>
-                      <div class="col-sm" style="text-align: right;"><button style="background-color: #f9ed30;border-color: #dbd028;"type="button" class="btn btn-warning">Собрать пакет</button></div>
+                      <div class="col-sm" style="text-align: right;"><button style="background-color: #f9ed30;border-color: #dbd028;"type="submit" class="btn btn-warning">Собрать пакет</button></div>
                     </div>
                       <!--button create-->
+                  </form>
               <!--table strat-->
                     <table class="table table-hover">
                       <thead>
@@ -249,7 +251,7 @@
                         </div>
                   </div>
               <!--finaly result-->
-
+              </div>
             </div>
         </div>
     </section>
@@ -325,19 +327,19 @@
 
 
      <!-- ====== ALL JS ====== -->
-   <script src="assets/js/jquery-3.3.1.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/lightbox.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/jquery.mixitup.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/typed.js"></script>
-    <script src="assets/js/skill.bar.js"></script>
-    <script src="assets/js/fact.counter.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/jquery-ui.min.js"></script>
-    <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
-    <script src="assets/js/polzunoc.js"></script>
+   <script src="/static/css/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/css/assets/js/bootstrap.min.js"></script>
+    <script src="/static/css/assets/js/lightbox.min.js"></script>
+    <script src="/static/css/assets/js/owl.carousel.min.js"></script>
+    <script src="/static/css/assets/js/jquery.mixitup.js"></script>
+    <script src="/static/css/assets/js/wow.min.js"></script>
+    <script src="/static/css/assets/js/typed.js"></script>
+    <script src="/static/css/assets/js/skill.bar.js"></script>
+    <script src="/static/css/assets/js/fact.counter.js"></script>
+    <script src="/static/css/assets/js/main.js"></script>
+    <script src="/static/css/assets/js/jquery-ui.min.js"></script>
+    <script src="/static/css/assets/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="/static/css/assets/js/polzunoc.js"></script>
 
 </body>
 
