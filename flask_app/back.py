@@ -31,4 +31,6 @@ def doit():
     g = main.getDictUserBuy(year,money)
     return render_template('admin.html', bonds = toViewList(g))
 
-app.run()
+
+if __name__ == "__main__":
+    app.run()
