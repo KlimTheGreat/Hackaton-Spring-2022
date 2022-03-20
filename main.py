@@ -1,6 +1,7 @@
 import InvestApi
 
 
+<<<<<<< HEAD
 def createUserPortfolio(Portfolio,user_year , user_money):
     userPortfolio = {}
     tempkey = []
@@ -45,6 +46,9 @@ def createUserPortfolio(Portfolio,user_year , user_money):
 
 
 def createPortfolio(all_bonds, year_now , invest_horizon_year):
+=======
+def createPortfolio(all_bonds, year_now,invest_horizon_year):
+>>>>>>> f9c7080c4f7866ae26fd54f7ff3bc8fb46053d4f
     year_plans = {}
     suitable_bonds = list(sorted(all_bonds, key=lambda d: d["revenue"]))
     suitable_bonds.reverse()
@@ -73,11 +77,16 @@ def createPortfolio(all_bonds, year_now , invest_horizon_year):
     year_plans["all"] = portfolio_all_years
     return year_plans
 
+<<<<<<< HEAD
 '''
 def getBoundAmount(all_bonds, year_plans, year, invest_horizon_year, deposit):
+=======
+
+def getBoundAmount(all_bonds, year_plans, year_now, invest_horizon_year, deposit):
+>>>>>>> f9c7080c4f7866ae26fd54f7ff3bc8fb46053d4f
     dic = {}
     quot = deposit / 5
-    for y in range(year+1, invest_horizon_year + 1):
+    for y in range(year_now + 1, invest_horizon_year + 1):
         for one_bond in all_bonds:
             if one_bond["id"] == year_plans[y]:
                 dic[one_bond[id]] = int(quot // one_bond["price"])
