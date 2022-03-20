@@ -1,8 +1,7 @@
 import InvestApi
 
 
-<<<<<<< HEAD
-def createUserPortfolio(Portfolio,user_year , user_money):
+def createUserPortfolio(Portfolio, user_year, user_money):
     userPortfolio = {}
     tempkey = []
     userPortfolioYear = {}
@@ -17,15 +16,15 @@ def createUserPortfolio(Portfolio,user_year , user_money):
         last_money += oneBondsMoney % priceBond['price']
         userPortfolio[i] = countBuyBonds
     userPortfolioYear[year] = userPortfolio
-    for currYear in range(year+1,user_year):
+    for currYear in range(year + 1, user_year):
         userPortfolio = {}
         for i in range(year, currYear):
             for k in userPortfolioYear[i]:
                 bond = InvestApi.getIdBonds(k);
-                if(bond['year'] == currYear):
+                if (bond['year'] == currYear):
                     last_money += bond['nominal'] * userPortfolioYear[i][k];
                     tempkey.append(userPortfolioYear[i][k])
-                if(bond['year'] > currYear):
+                if (bond['year'] > currYear):
                     last_money += bond['nominal'] / 100 * bond['prc']
             print(last_money)
             portfolioYear = Portfolio[currYear]
@@ -42,13 +41,7 @@ def createUserPortfolio(Portfolio,user_year , user_money):
     return userPortfolioYear
 
 
-
-
-
-def createPortfolio(all_bonds, year_now , invest_horizon_year):
-=======
-def createPortfolio(all_bonds, year_now,invest_horizon_year):
->>>>>>> f9c7080c4f7866ae26fd54f7ff3bc8fb46053d4f
+def createPortfolio(all_bonds, year_now, invest_horizon_year):
     year_plans = {}
     suitable_bonds = list(sorted(all_bonds, key=lambda d: d["revenue"]))
     suitable_bonds.reverse()
@@ -77,7 +70,7 @@ def createPortfolio(all_bonds, year_now,invest_horizon_year):
     year_plans["all"] = portfolio_all_years
     return year_plans
 
-<<<<<<< HEAD
+
 '''
 def getBoundAmount(all_bonds, year_plans, year, invest_horizon_year, deposit):
 =======
@@ -92,6 +85,8 @@ def getBoundAmount(all_bonds, year_plans, year_now, invest_horizon_year, deposit
                 dic[one_bond[id]] = int(quot // one_bond["price"])
     return dic
 '''
+
+
 def getDictUserBuy(countYear, user_money):
     all_bonds_plus_revenue = InvestApi.getAllBonds()
     for bond in all_bonds_plus_revenue:
@@ -100,8 +95,7 @@ def getDictUserBuy(countYear, user_money):
                                         365 * (bond["year"] - 2021)) * 100, 2)
     year = 2022  # какой сейчас год
     user_year = 2022 + int(countYear)
-    #user_year = 2024  # todo: задает пользователь
-    #user_money = 50000  # todo: задает пользователь
+    # user_year = 2024  # todo: задает пользователь
+    # user_money = 50000  # todo: задает пользователь
     a = createPortfolio(all_bonds_plus_revenue, year, user_year)
     return createUserPortfolio(a, user_year, int(user_money))
-
