@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -167,11 +166,15 @@
                     </div>
                   <!--capital-->
                   <!--years-->
-                    <div class="col-sm-8">Выберите срок
-                      <div class="polzunok-container-1">
-                          <div class="polzunok-1"></div>
-                      </div>
-                    </div>
+                    <div class="col-auto">
+                        <label class="visually-hidden" for="autoSizingSelect">Временной промежуток</label>
+                        <select name="year" style="margin-top: 4%;"class="form-control" id="autoSizingSelect">
+                        <option selected>Выберите срок.</option>
+                        <option value="1">1 год</option>
+                        <option value="2">2 года</option>
+                        <option value="3">3 года</option>
+                        </select>
+                        </div>
                     <!--years-->
                     </div>
                   <!--button create-->

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+$responseJson = $_GET['list'];
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Applicator - Admin Dashboard Template</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" href="/static/css/assets/images/logo/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/static/css/assets/images/logo/favicon.png">
+
+    <!-- core dependcies css -->
+    <link rel="stylesheet" href="/static/css/assets/vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/static/css/assets/vendor/PACE/themes/blue/pace-theme-minimal.css" />
+    <link rel="stylesheet" href="/static/css/assets/vendor/perfect-scrollbar/css/perfect-scrollbar.min.css" />
+
+    <!-- page css -->
+
+    <!-- core css -->
+    <link href="/static/css/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/static/css/assets/css/themify-icons.css" rel="stylesheet">
+    <link href="/static/css/assets/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="/static/css/assets/css/animate.min.css" rel="stylesheet">
+    <link href="/static/css/assets/css/app.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app header-default side-nav-dark">
+        <div class="layout">
+            <!-- Header START -->
+            <div class="header navbar">
+                <div class="header-container">
+                    <div class="nav-logo">
+                        <a href="index.html">
+                            <div class="logo logo-dark" style="background-image: url('/static/css/assets/images/logo/logo.png')"></div>
+                            <div class="logo logo-white" style="background-image: url('/static/css/assets/images/logo/logo-white.png')"></div>
+                        </a>
+                    </div>
+                    <ul class="nav-left">
+                        <li>
+                            <a class="sidenav-fold-toggler" href="javascript:void(0);">
+                                <i class="mdi mdi-menu"></i>
+                            </a>
+                            <a class="sidenav-expand-toggler" href="javascript:void(0);">
+                                <i class="mdi mdi-menu"></i>
+                            </a>
+                        </li>
+                        <li class="search-input">
+                            <input class="form-control" type="text" placeholder="Type to search...">
+                            <div class="search-predict">
+                                <div class="search-wrapper scrollable">
+                                    <div class="p-v-10">
+                                        <span class="display-block m-v-5 p-h-20 text-gray">
+                                            <i class="ti-file p-r-5"></i>
+                                            <span>Files</span>
+                                        </span>
+                                        <ul class="list-media">
+                                            <li class="list-item">
+                                                <a href="javascript:void(0);" class="media-hover p-h-20">
+                                                    <div class="media-img">
+                                                        <div class="icon-avatar bg-success">
+                                                            <i class="mdi mdi-file-outline"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info">
+                                                        <span class="title p-t-10">Document.xls</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-item">
+                                                <a href="javascript:void(0);" class="media-hover p-h-20">
+                                                    <div class="media-img">
+                                                        <div class="icon-avatar bg-info">
+                                                            <i class="mdi mdi-file-outline"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info">
+                                                        <span class="title p-t-10">Mockup.doc</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-item">
+                                                <a href="javascript:void(0);" class="media-hover p-h-20">
+                                                    <div class="media-img">
+                                                        <div class="icon-avatar bg-danger">
+                                                            <i class="mdi mdi-file-outline"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info">
+                                                        <span class="title p-t-10">Document.pdf</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="m-h-20 border top"></div>
+                                    <div class="p-v-10">
+                                        <span class="display-block m-v-5 p-h-20 text-gray">
+                                            <i class="ti-user p-r-5"></i>
+                                            <span>Members</span>
+                                        </span>
+                                        <ul class="list-media">
+                                            <li class="list-item">
+                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                    <div class="media-img">
+                                                        <img src="/static/css/assets/images/avatars/thumb-3.jpg" alt="">
+                                                    </div>
+                                                    <div class="info">
+                                                        <span class="title p-t-10">Debra Stewart</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="list-item">
+                                                <a href="javascript:void(0);" class="conversation-toggler media-hover p-h-20">
+                                                    <div class="media-img">
+                                                        <img src="/static/css/assets/images/avatars/thumb-5.jpg" alt="">
+                                                    </div>
+                                                    <div class="info">
+                                                        <span class="title p-t-10">Jane Hunt</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="search-footer">
+                                    <span>You are Searching for '<b class="text-dark"><span class="serach-text-bind"></span></b>'</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav-right">
+                        <li style="margin-top: 11%;">
+                          <p style="color: white;">Баланс:<span>5000Р</span></p>
+                        </li>
+
+                        <li class="user-profile dropdown dropdown-animated scale-left">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                                <img class="profile-img img-fluid" src="/static/css/assets/images/avatars/thumb-13.jpg" alt="">
+                            </a>
+                            <ul class="dropdown-menu dropdown-md p-v-0">
+                                <li>
+                                    <ul class="list-media">
+                                        <li class="list-item p-15">
+                                            <div class="media-img">
+                                                <img src="/static/css/assets/images/avatars/thumb-13.jpg" alt="">
+                                            </div>
+                                            <div class="info">
+                                                <span class="title text-semibold">Marshall Nichols</span>
+                                                <span class="sub-title">UI/UX Desinger</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li>
+                                    <a href="">
+                                        <i class="ti-settings p-r-10"></i>
+                                        <span>Setting</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="ti-user p-r-10"></i>
+                                        <span>Profile</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="ti-email p-r-10"></i>
+                                        <span>Inbox</span>
+                                        <span class="badge badge-pill badge-success pull-right">2</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="ti-power-off p-r-10"></i>
+                                        <span>Logout</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Header END -->
+
+            <!-- Side Nav START -->
+            <div class="side-nav expand-lg">
+                <div class="side-nav-inner">
+                    <ul class="side-nav-menu scrollable">
+                        <li class="side-nav-header">
+                            <span>Меню</span>
+                        </li>
+                        <li class="nav-item dropdown open">
+                            <a class="dropdown-toggle" href="javascript:void(0);">
+
+                                <span class="title">Главная</span>
+                            </a>
+
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Side Nav END -->
+
+            <!-- Page Container START -->
+            <div class="page-container">
+                <!-- Quick View START -->
+                <div class="quick-view">
+                    <ul class="quick-view-tabs nav nav-tabs nav-justified" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#config" role="tab" data-toggle="tab">
+                                <span>Config</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#quick-view-chat" role="tab" data-toggle="tab">
+                                <span>Chat</span>
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#activity" role="tab" data-toggle="tab">
+                                <span>Activity</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content scrollable">
+                        <!-- config START -->
+                        <div id="config" role="tabpanel" class="tab-pane fade in active">
+                        </div>
+                        <!-- config END -->
+                        <!-- chat START -->
+                        <div id="quick-view-chat" role="tabpanel" class="tab-pane fade">
+
+                        </div>
+                        <!-- chat END -->
+                        <!-- activity START -->
+                        <div id="activity" role="tabpanel" class="tab-pane fade">
+
+                        </div>
+                        <!-- activity END -->
+                    </div>
+                </div>
+                <!-- Side Panel END -->
+
+                <!-- Content Wrapper START -->
+                <div class="main-content">
+                    <div class="container-fluid">
+
+                      <div class="row">
+        <div class="container">
+            <div class="row">
+            <!--years-->
+              <div class="col-sm-8">Ваши облигации:  </div>
+              <!--years-->
+              </div>
+        <!--table strat-->
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>Год</th>
+                    <th>Название</th>
+                    <th>Количество</th>
+                    <th>Стоимость</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {% for bond in bonds %}
+                  <tr>
+                    <th scope="row">{{ bond[0] }}</th>
+                    <td>{{ bond[1] }}</td>
+                    <td>{{ bond[2] }}</td>
+                    <td>{{ bond[3] }}</td>
+                  </tr>
+                    {% endfor %}
+                {% block content %}{% endblock %}
+                </tbody>
+              </table>
+          <!--table end-->
+        <hr>
+          <!--finaly result-->
+            <div class="container">
+                  <div class="row">
+                    <div class="col-4">
+                      <p>Итог: </p>
+                    </div>
+                    <div class="col-4">
+                      <p>502.000Р </p>
+                    </div>
+                    <div class="col">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <p>Закрытие: </p>
+                    </div>
+                    <div class="col-4">
+                      <p>19.03.2025г. </p>
+                    </div>
+                    <div class="col">
+
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <p>Доходность/год: </p>
+                    </div>
+                    <div class="col-4">
+                      <p>12,2% </p>
+                    </div>
+                    <div class="col">
+                        <button style="background-color: #f9ed30;border-color: #dbd028;"type="button" class="btn btn-warning">Перегрузка</button>
+                        <button style="background-color: #f9ed30;border-color: #dbd028;"type="button" class="btn btn-warning">Продать все</button>
+                    </div>
+                  </div>
+            </div>
+
+                    </div>
+                </div>
+                <!-- Content Wrapper END -->
+
+                <!-- Footer START -->
+                <footer class="content-footer">
+                    <div class="footer">
+                        <div class="copyright">
+                            <span>Copyright © 2018 <b class="text-dark">Theme_Nate</b>. All rights reserved.</span>
+                            <span class="go-right">
+                                <a href="" class="text-gray m-r-15">Term &amp; Conditions</a>
+                                <a href="" class="text-gray">Privacy &amp; Policy</a>
+                                  <button style="background-color: #f9ed30;border-color: #dbd028;"type="button" class="btn btn-warning">-></button>
+                            </span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- Footer END -->
+
+            </div>
+            <!-- Page Container END -->
+
+        </div>
+    </div>
+
+    <!-- build:js assets/js/vendor.js -->
+    <!-- core dependcies js -->
+    <script src="/static/css/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="/static/css/assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/static/css/assets/vendor/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/static/css/assets/vendor/PACE/pace.min.js"></script>
+    <script src="/static/css/assets/vendor/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
+    <script src="/static/css/assets/vendor/d3/d3.min.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js assets/js/app.min.js -->
+    <!-- core js -->
+    <script src="/static/css/assets/js/app.js"></script>
+    <!-- configurator js -->
+    <script src="/static/css/assets/js/configurator.js"></script>
+    <!-- endbuild -->
+
+    <!-- page js -->
+    <script src="/static/css/assets/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="/static/css/assets/vendor/jquery.sparkline/jquery.sparkline.min.js"></script>
+    <script src="/static/css/assets/js/dashboard/default.js"></script>
+
+</body>
+
+</html>
