@@ -1,7 +1,7 @@
 import InvestApi
 
 
-def createPortfolio(all_bonds, invest_horizon_year, year_now):
+def createPortfolio(all_bonds, year_now,invest_horizon_year):
     year_plans = {}
     suitable_bonds = list(sorted(all_bonds, key=lambda d: d["revenue"]))
     suitable_bonds.reverse()
@@ -31,10 +31,10 @@ def createPortfolio(all_bonds, invest_horizon_year, year_now):
     return year_plans
 
 
-def getBoundAmount(all_bonds, year_plans, year, invest_horizon_year, deposit):
+def getBoundAmount(all_bonds, year_plans, year_now, invest_horizon_year, deposit):
     dic = {}
     quot = deposit / 5
-    for y in range(year+1, invest_horizon_year + 1):
+    for y in range(year_now + 1, invest_horizon_year + 1):
         for one_bond in all_bonds:
             if one_bond["id"] == year_plans[y]:
                 dic[one_bond[id]] = int(quot // one_bond["price"])
@@ -48,7 +48,6 @@ if __name__ == "__main__":  # главная функция
         bond["revenue"] = round(((bond["nominal"] - bond["price"]) + (
                 bond["prc"] / 100 * bond["nominal"] * (bond["year"] - 2021))) / bond["price"] * 365 / (
                                         365 * (bond["year"] - 2021)) * 100, 2)
-
     year = 2022  # какой сейчас год
     user_year = 2025  # todo: задает пользователь
     user_money = 50000  # todo: задает пользователь
