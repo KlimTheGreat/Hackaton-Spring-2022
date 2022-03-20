@@ -186,46 +186,40 @@
                       <!--button create-->
                   </form>
               <!--table strat-->
-                    <table class="table table-hover">
-                      <thead>
-                        <tr>
-                          <th>#</th>
-                          <th>Название</th>
-                          <th>Последние изменения</th>
-                          <th>Стоимость</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Microsoft</td>
-                          <td>+5%</td>
-                          <td>1050Р</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Apple</td>
-                          <td>-10%</td>
-                          <td>2300Р</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Huaway</td>
-                          <td>-1.5%</td>
-                          <td>2700Р</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <table class="table table-hover">
+                      {% if bonds != null %}
+                <thead>
+                  <tr>
+                    <th>Год</th>
+                    <th>Название</th>
+                    <th>Количество</th>
+                    <th>Стоимость</th>
+                  </tr>
+                </thead>
+                      {% endif %}
+                <tbody>
+                {% for bond in bonds %}
+                  <tr>
+                    <th scope="row">{{ bond[0] }}</th>
+                    <td>{{ bond[1] }}</td>
+                    <td>{{ bond[2] }}</td>
+                    <td>{{ bond[3] }}</td>
+                  </tr>
+                    {% endfor %}
+                {% block content %}{% endblock %}
+                </tbody>
+              </table>
                 <!--table end-->
               <hr>
                 <!--finaly result-->
+                  {% if procent != None %}
                   <div class="container">
                         <div class="row">
                           <div class="col-4">
                             <p>Итог: </p>
                           </div>
                           <div class="col-4">
-                            <p>502.000Р </p>
+                            <p>{{ result }} </p>
                           </div>
                           <div class="col">
                           </div>
@@ -235,7 +229,7 @@
                             <p>Закрытие: </p>
                           </div>
                           <div class="col-4">
-                            <p>19.03.2025г. </p>
+                            <p>20.03.2025г. </p>
                           </div>
                           <div class="col">
 
@@ -246,13 +240,14 @@
                             <p>Доходность/год: </p>
                           </div>
                           <div class="col-4">
-                            <p>12,2% </p>
+                            <p>{{procent}}</p>
                           </div>
                           <div class="col">
                               <button style="background-color: #f9ed30;border-color: #dbd028;"type="button" class="btn btn-warning">Оформить заказ</button>
                           </div>
                         </div>
                   </div>
+                  {% endif %}
               <!--finaly result-->
               </div>
             </div>

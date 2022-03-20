@@ -18,19 +18,19 @@ def toViewList(dictList):
     return table
 
 
-app = Flask(__name__)
-app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
-@app.route('/')
+application = Flask(__name__)
+application.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+@application.route('/')
 def hello():
     return render_template('index.html')
 
-@app.route('/process_data/', methods=['POST'])
+@application.route('/process_data/', methods=['POST', 'get'])
 def doit():
     money = request.form['money']
     year = request.form['year']
-    g = main.getDictUserBuy(year,money)
-    return render_template('admin.html', bonds = toViewList(g))
+    mainList = main.getDictUserBuy(year,money)
+    return render_template('index.html', bonds = toViewList(mainList),result = None)
 
 
 if __name__ == "__main__":
-    app.run()
+    application.run(host='0.0.0.0')

@@ -4,10 +4,11 @@ import InvestApi
 def createUserPortfolio(Portfolio, user_year, user_money):
     userPortfolio = {}
     tempkey = []
+    procent = 0
     userPortfolioYear = {}
     all_bonds = InvestApi.getAllBonds();
     year = 2022
-    last_money = 0;
+    last_money = 0.;
     portfolioYear = Portfolio[year]
     oneBondsMoney = user_money // len(portfolioYear)
     for i in portfolioYear:
@@ -25,8 +26,8 @@ def createUserPortfolio(Portfolio, user_year, user_money):
                     last_money += bond['nominal'] * userPortfolioYear[i][k];
                     tempkey.append(userPortfolioYear[i][k])
                 if (bond['year'] > currYear):
-                    last_money += bond['nominal'] / 100 * bond['prc']
-            print(last_money)
+                    last_money += int(bond['nominal']) / 100 * bond['prc']
+                    procent += int(bond['nominal']) / 100 * bond['prc']
             portfolioYear = Portfolio[currYear]
             oneBondsMoney = last_money // len(portfolioYear)
             for i in portfolioYear:
@@ -37,7 +38,6 @@ def createUserPortfolio(Portfolio, user_year, user_money):
                 last_money += oneBondsMoney % priceBond['price']
                 userPortfolio[i] = countBuyBonds
             userPortfolioYear[currYear] = userPortfolio
-
     return userPortfolioYear
 
 
@@ -98,4 +98,5 @@ def getDictUserBuy(countYear, user_money):
     # user_year = 2024  # todo: задает пользователь
     # user_money = 50000  # todo: задает пользователь
     a = createPortfolio(all_bonds_plus_revenue, year, user_year)
-    return createUserPortfolio(a, user_year, int(user_money))
+    r = createUserPortfolio(a, user_year, int(user_money))
+    return r
